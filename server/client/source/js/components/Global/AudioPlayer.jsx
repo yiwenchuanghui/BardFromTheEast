@@ -1,14 +1,20 @@
 import React from 'react';
 
 const AudioPlayer = props => {
+  const Background = '/assets/images/ben_chung.jpg';
   return (
     <div>
       <article className='screen'>
         <input type='checkbox' value='None' id='magicButton' name='check' />
         <label className='main' htmlFor='magicButton' />
 
-        <div className='coverImage' />
-        <div className='search' />
+        <div
+          className='coverImage'
+          style={ {
+            background: `url(${ Background }) no-repeat`,
+            backgroundSize: 'cover',
+          } }
+        />
         <div className='bodyPlayer' />
 
         <table className='list'>

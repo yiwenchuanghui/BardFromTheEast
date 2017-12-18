@@ -11,7 +11,7 @@ class HomePage extends Component {
           <ReactPlayer className='video' url='assets/video/video.mp4' controls />
         </div>
         <div className='columns'>
-          <div className='column is-three-quarters'>
+          <div className='column is-two-thirds'>
             <NewsFeed />
           </div>
           <div className='column' style={{position: 'relative'}}>
