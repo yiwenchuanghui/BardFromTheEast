@@ -1,108 +1,179 @@
-import React from 'react';
+import React, { Component } from 'react';
+import $ from 'jquery';
 
-const AudioPlayer = props => {
-  const Background = '/assets/images/ben_chung.jpg';
-  return (
-    <div>
-      <article className='screen'>
-        <input type='checkbox' value='None' id='magicButton' name='check' />
-        <label className='main' htmlFor='magicButton' />
+function secsToMins(time) {
+  const int = Math.floor(time);
+  const mins = Math.floor(int / 60);
+  const secs = int % 60;
+  const newTime = `${ mins }:${ `0${ secs }`.slice(-2) }`;
 
-        <div
-          className='coverImage'
-          style={ {
-            background: `url(${ Background }) no-repeat`,
-            backgroundSize: 'cover',
-          } }
-        />
-        <div className='bodyPlayer' />
+  return newTime;
+}
 
-        <table className='list'>
-          <tr className='song'>
-            <td className='nr'>
-              <h5>1</h5>
-            </td>
-            <td className='title'>
-              <h6>Heavydirtysoul</h6>
-            </td>
-            <td className='length'>
-              <h5>3:54</h5>
-            </td>
-            <td>
-              <input type='checkbox' id='heart' />
-              <label className='zmr' htmlFor='heart' />
-            </td>
-          </tr>
+class AudioPlayer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      player: false,
+    };
+  }
 
-          <tr className='song'>
-            <td className='nr'>
-              <h5>2</h5>
-            </td>
-            <td className='title'>
-              <h6 style={ { color: '#ff564c' } }>StressedOut</h6>
-            </td>
-            <td className='length'>
-              <h5>3:22</h5>
-            </td>
-            <td>
-              <input type='checkbox' id='heart1' checked />
-              <label className='zmr' htmlFor='heart1' />
-            </td>
-          </tr>
-        </table>
+  componentDidMount() {
+    this.audioFunc();
+    console.log(this.audio);
+  }
 
-        <div className='shadow' />
+  audioFunc() {
+    const player = $('.player');
+    const audio = $(this.audio);
+    const duration = $('.duration');
+    const currentTime = $('.current-time');
+    const progressBar = $('.progress span');
+    let mouseDown = false;
+    let rewind,
+      showCurrentTime;
+    function getCurrentTime() {
+      const currentTimeFormatted = secsToMins(audio[0].currentTime);
+      const currentTimePercentage = audio[0].currentTime / audio[0].duration * 100;
+      currentTime.text(currentTimeFormatted);
+      progressBar.css('width', `${ currentTimePercentage }%`);
+      if (player.hasClass('playing')) {
+        showCurrentTime = requestAnimationFrame(getCurrentTime);
+      } else {
+        cancelAnimationFrame(showCurrentTime);
+      }
+    }
 
-        <div className='bar' />
+    audio
+      .on('loadedmetadata', () => {
+        const durationFormatted = secsToMins(audio[0].duration);
+        duration.text(durationFormatted);
+      })
+      .on('ended', () => {
+        if ($('.repeat').hasClass('active')) {
+          audio[0].currentTime = 0;
+          audio[0].play();
+        } else {
+          audio[0].currentTime = 0;
+        }
+      });
+
+    $('button')
+      .on('click', function () {
+        const self = $(this);
+
+        if (self.hasClass('play-pause') && player.hasClass('paused')) {
+          player.removeClass('paused').addClass('playing');
+          audio[0].play();
+          getCurrentTime();
+        } else if (self.hasClass('play-pause') && player.hasClass('playing')) {
+          player.removeClass('playing').addClass('paused');
+          audio[0].pause();
+        }
+
+        if (self.hasClass('shuffle') || self.hasClass('repeat')) {
+          self.toggleClass('active');
+        }
+      })
+      .on('mousedown', function () {
+        const self = $(this);
+
+        if (self.hasClass('ff')) {
+          player.addClass('ffing');
+          audio[0].playbackRate = 2;
+        }
+
+        if (self.hasClass('rw')) {
+          player.addClass('rwing');
+          rewind = setInterval(() => {
+            audio[0].currentTime -= 0.3;
+          }, 100);
+        }
+      })
+      .on('mouseup', function () {
+        const self = $(this);
+
+        if (self.hasClass('ff')) {
+          player.removeClass('ffing');
+          audio[0].playbackRate = 1;
+        }
+
+        if (self.hasClass('rw')) {
+          player.removeClass('rwing');
+          clearInterval(rewind);
+        }
+      });
+
+    player.on('mousedown mouseup', () => {
+      mouseDown = !mouseDown;
+    });
+
+    progressBar.parent().on('click mousemove', function (e) {
+      let self = $(this),
+        totalWidth = self.width(),
+        offsetX = e.offsetX,
+        offsetPercentage = offsetX / totalWidth;
+
+      if (mouseDown || e.type === 'click') {
+        audio[0].currentTime = audio[0].duration * offsetPercentage;
+        if (player.hasClass('paused')) {
+          progressBar.css('width', `${ offsetPercentage * 100 }%`);
+        }
+      }
+    });
+  }
+
+  render() {
+
+    return (
+      <div className='player paused'>
+        <div className='album'>
+          <div className='cover'>
+            <div>
+              <img
+                src='../../../assets/images/Bardlogo.jpg'
+                alt='3rdburglar by Wordburglar'
+              />
+            </div>
+          </div>
+        </div>
 
         <div className='info'>
-          <h4>STRESSED OUT</h4>
-          <h3>twenty one pilots - Blurryface</h3>
-        </div>
-        <audio preload='auto' id='audio' controls>
-          <source src='http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.mp3' />
-          <source src='http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.ogg' />
-        </audio>
-        <table className='player'>
-          <td>
-            <input type='checkbox' id='backward' />
-            <label className='backward' htmlFor='backward' />
-          </td>
-          <td>
-            <input type='checkbox' id='play' title='Play' onClick='togglePlayPause()' />
-            <label className='play' htmlFor='play' />
-          </td>
-          <td>
-            <input type='checkbox' id='forward' />
-            <label className='forward' htmlFor='forward' />
-          </td>
-        </table>
+          <div className='time'>
+            <span className='current-time'>0:00</span>
+            <span className='progress'>
+              <span />
+            </span>
+            <span className='duration'>0:00</span>
+          </div>
 
-        <table className='footer'>
-          <td>
-            <input type='checkbox' id='love' checked />
-            <label className='love' htmlFor='love' />
-          </td>
-          <td>
-            <input type='checkbox' id='shuffle' />
-            <label className='shuffle' htmlFor='shuffle' />
-          </td>
-          <td>
-            <input type='checkbox' id='repeat' checked />
-            <label className='repeat' htmlFor='repeat' />
-          </td>
-          <td>
-            <input type='checkbox' id='options' />
-            <label className='options' htmlFor='options' />
-          </td>
-        </table>
-
-        <div className='current'>
-          <h2>STRESSED OUT</h2>
+          <h1>Little Angle</h1>
+          <h2>东方诗人</h2>
         </div>
-      </article>
-    </div>
-  );
-};
+
+        <div className='actions'>
+          <button className='shuffle'>
+            <div className='arrow' />
+            <div className='arrow' />
+          </button>
+          <button className='button rw'>
+            <div className='arrow' />
+            <div className='arrow' />
+          </button>
+          <button className='button play-pause'>
+            <div className='arrow' />
+          </button>
+          <button className='button ff'>
+            <div className='arrow' />
+            <div className='arrow' />
+          </button>
+          <button className='repeat' />
+        </div>
+
+        <audio ref={ audio => (this.audio = audio) } src='../../../assets/audio/Little_Angle.mp3' />
+      </div>
+    );
+  }
+}
 
 export default AudioPlayer;
