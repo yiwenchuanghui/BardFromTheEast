@@ -6,6 +6,14 @@ html {
 
 .header {
   height: 30vh;
+  font-family: 'Bold Font';
+}
+.navbar {
+  background: url(/../../assets/images/bard_white.png) no-repeat center center;
+  background-size: 200px 141px;
+  @include sm{
+    background: none;
+  };
 }
 .nav-logo {
   margin-left: 1em;

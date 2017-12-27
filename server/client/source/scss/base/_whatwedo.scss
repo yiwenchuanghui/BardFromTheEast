@@ -1,0 +1,66 @@
+.wwd-page {
+  background: url('/assets/images/wwd2.jpg') no-repeat center center;
+  background-size: cover;
+  padding-bottom: 150px;
+  align-items: center;
+
+  .title {
+    background-color: #000;
+    font-size: 2em;
+    padding: 10px 0;
+    margin-left: 15px;
+    font-family: 'Bold Font';
+    display: inline-block;
+    color: #fff;
+  }
+}
+
+
+/*WWDCard start*/
+.wwd-card {
+  margin: 10px;
+  width: 300px;
+  border-radius: 2px;
+}
+.wwd-card-img {
+  width: 100%;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border: 5px solid #000;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  img {
+    width: 100%;
+    // object-fit: cover;
+    transition: all 0.25s ease;
+  }
+  h1 {
+    background: rgba(0, 0, 0, 0.8);
+    color: #00ffff;
+    font-family: 'Bold Font';
+    max-width: 50%;
+    padding: 2px;
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+  }
+}
+.wwd-card-content {
+  margin-top: 15px;
+  background-color: #000;
+  text-align: left;
+  padding: 15px;
+  h2 {
+    color: #00ffff;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  p {
+    color: #fff;
+    font-size: 16px;
+  }
+}
+
+/*WWDCard end*/

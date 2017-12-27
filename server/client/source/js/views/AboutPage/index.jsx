@@ -18,7 +18,7 @@ const ARTISTS = [
   {
     name: 'Ben Chung',
     img: '../../assets/images/ben_chung.jpg',
-    about: 'My name is Lok Ben Chung, I am from China, Guangzhou',
+    about: 'My name is Ben Chung, I am from China, Guangzhou',
   },
   {
     name: 'Lok Ray Chan',
@@ -28,7 +28,7 @@ const ARTISTS = [
   {
     name: 'Ben Chung',
     img: '../../assets/images/ben_chung.jpg',
-    about: 'My name is Lok Ben Chung, I am from China, Guangzhou',
+    about: 'My name is Ben Chung, I am from China, Guangzhou',
   },
   {
     name: 'Anthony Kam',
