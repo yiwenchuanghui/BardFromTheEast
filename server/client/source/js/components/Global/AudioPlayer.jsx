@@ -53,7 +53,7 @@ class AudioPlayer extends Component {
     const duration = $('.duration');
     const currentTime = $('.current-time');
     const progressBar = $('.progress span');
-    const list = $('.test');
+    const list = $('.music-list');
     let mouseDown = false;
     let rewind,
       showCurrentTime;
@@ -217,7 +217,7 @@ class AudioPlayer extends Component {
         <div className='playlist'>
           <ul>
             {PLAYLIST.map((music, index) => (
-              <li key={ index } value={ index } className='test'>{`${ index + 1 }. ${ music.name }`}</li>
+              <li key={ index } value={ index } className='music-list'>{`${ index + 1 }. ${ music.name }`}</li>
             ))}
           </ul>
         </div>

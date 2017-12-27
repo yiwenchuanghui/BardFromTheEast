@@ -1,0 +1,53 @@
+.about-page {
+  background: url('/assets/images/night.jpg') no-repeat center center;
+  background-size: cover;
+  .title {
+    background-color: #000;
+    font-size: 2em;
+    padding: 10px 0;
+    margin-left: 15px;
+    font-family: 'Bold Font';
+    display: inline-block;
+  }
+}
+
+/*ArtistCard start*/
+.artist-card {
+  margin: 10px;
+  width: 300px;
+  line-height: 1.42857143;
+  background-color: #000;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.25s;
+}
+.artist-card:hover {
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.artist-card-img {
+  width: 100%;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  display: block;
+  overflow: hidden;
+}
+.artist-card-img img {
+  width: 100%;
+  // object-fit: cover;
+  transition: all 0.25s ease;
+}
+.artist-card-content {
+  text-align: left;
+  padding: 15px;
+  h2 {
+    color: cyan;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  p {
+    color: #fff;
+    font-size: 16px;
+  }
+}
+
+/*ArtistCard end*/
