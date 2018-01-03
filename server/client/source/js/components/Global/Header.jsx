@@ -6,8 +6,11 @@ const Header = () => {
   return (
     <nav className='navbar is-black is-transparents header '>
       <div className='navbar-brand nav-logo'>
+
+
+
         <NavLink className='navbar-item' activeClassName='' to={ routeCodes.HOME }>
-          <img src='assets/images/Bardlogo.jpg' /> Bard From The East
+          Bard From The East
         </NavLink>
 
         <div className='navbar-burger burger' data-target='navbarExampleTransparentExample'>
@@ -16,9 +19,13 @@ const Header = () => {
           <span />
         </div>
       </div>
+
       <div className='navbar-menu navbar-end app-menu'>
+        <NavLink className='navbar-item' activeClassName='active' to={ routeCodes.WHATWEDO }>
+          WhatWeDo
+        </NavLink>
         <NavLink className='navbar-item' activeClassName='active' to={ routeCodes.ABOUT }>
-          About
+          AboutTeam
         </NavLink>
         <NavLink className='navbar-item' activeClassName='active' to={ routeCodes.CONTACT }>
           Contact

@@ -3,7 +3,7 @@
   width: 20em;
   min-height: 20em;
   overflow: hidden;
-  background: url('/assets/images/background12.png') no-repeat;
+  background: url('../assets/images/background12.png') no-repeat;
   background-size: cover;
   border-radius: 0.25em;
   box-shadow:
@@ -242,7 +242,7 @@
 }
 
 .progress:not(:last-child) {
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 .actions {
   position: relative;
@@ -459,6 +459,15 @@ button {
 .shuffle.active,
 .repeat.active {
   color: #bde;
+}
+
+.playlist {
+  ul {
+    li {
+      border: 1px solid #d5d5d5;
+      cursor: pointer;
+    }
+  }
 }
 
 @keyframes spin {

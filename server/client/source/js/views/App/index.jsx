@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 
 import Header from '../../components/Global/Header';
 import HomePage from '../HomePage';
+import AboutPage from '../AboutPage';
+import WhatWeDo from '../WhatWeDo';
+import Footer from '../../components/Global/Footer';
 
 const publicPath = '/';
 
@@ -11,6 +14,7 @@ export const routeCodes = {
   HOME: publicPath,
   ABOUT: `${ publicPath }about`,
   CONTACT: `${ publicPath }contact`,
+  WHATWEDO: `${ publicPath }wwd`,
 };
 
 class App extends Component {
@@ -26,9 +30,11 @@ class App extends Component {
           <div className='container'>
             <Switch>
               <Route exact path={ routeCodes.HOME } component={ HomePage } />
+              <Route exact path={ routeCodes.ABOUT } component={ AboutPage } />
+              <Route exact path={ routeCodes.WHATWEDO } component={ WhatWeDo } />
             </Switch>
           </div>
-
+          <Footer />
         </div>
       </BrowserRouter>
     );
