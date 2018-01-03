@@ -2,6 +2,10 @@ import React from 'react';
 import Masonry from '../../components/Global/Masonry';
 import ArtistCard from './ArtistCard';
 
+import '../../../assets/images/Anthony_Kam.jpeg';
+import '../../../assets/images/LokRay_Chan.jpg';
+import '../../../assets/images/ben_chung.jpg';
+
 const brakePoints = [350, 576, 769, 992, 1200];
 
 const ARTISTS = [
