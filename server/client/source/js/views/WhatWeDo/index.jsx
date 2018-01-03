@@ -2,9 +2,9 @@ import React from 'react';
 import Masonry from '../../components/Global/Masonry';
 import WWDcard from './WWDcard';
 
-import '../../assets/images/wwd.jpeg';
-import '../../assets/images/camera.jpeg';
-import '../../assets/images/sm.jpeg';
+import '../../../assets/images/wwd.jpeg';
+import '../../../assets/images/camera.jpeg';
+import '../../../assets/images/sm.jpeg';
 
 const brakePoints = [350, 576, 769, 992, 1200];
 
