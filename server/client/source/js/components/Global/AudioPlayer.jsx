@@ -20,15 +20,15 @@ const PLAYLIST = [
   },
   {
     name: 'New Day',
-    directory: dir + 'New_Day.mp3',
+    directory: 'https://s3-ap-southeast-1.amazonaws.com/caci2017/New_Day.mp3',
   },
   {
     name: 'My Heart Will Go On',
-    directory: dir + 'My_Heart_Will_Go_On.mp3',
+    directory: 'https://s3-ap-southeast-1.amazonaws.com/caci2017/My_Heart_Will_Go_On.mp3',
   },
   {
     name: 'River',
-    directory: dir + 'River.mp3',
+    directory: 'https://s3-ap-southeast-1.amazonaws.com/caci2017/River.mp3',
   },
 ];
 
