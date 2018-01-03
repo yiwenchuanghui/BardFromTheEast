@@ -16,19 +16,19 @@ const agent = navigator.userAgent.toLowerCase();
 const PLAYLIST = [
   {
     name: 'Little Angle',
-    directory: 'Little_Angle.mp3',
+    directory: 'https://s3-ap-southeast-1.amazonaws.com/caci2017/Little_Angle.mp3',
   },
   {
     name: 'New Day',
-    directory: 'New_Day.mp3',
+    directory: dir + 'New_Day.mp3',
   },
   {
     name: 'My Heart Will Go On',
-    directory: 'My_Heart_Will_Go_On.mp3',
+    directory: dir + 'My_Heart_Will_Go_On.mp3',
   },
   {
     name: 'River',
-    directory: 'River.mp3',
+    directory: dir + 'River.mp3',
   },
 ];
 
@@ -223,7 +223,7 @@ class AudioPlayer extends Component {
         </div>
         <audio
           ref={ audio => (this.audio = audio) }
-          src={ dir + PLAYLIST[this.state.currentTrackIndex].directory }
+          src={ PLAYLIST[this.state.currentTrackIndex].directory }
         />
       </div>
     );

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
 import AudioPlayer from '../../components/Global/AudioPlayer';
 import NewsFeed from './NewsFeed';
+import '../../../assets/images/logo.png';
+
 
 const NEWS_DATA = [
   {
@@ -23,7 +25,7 @@ class HomePage extends Component {
     return (
       <div>
         <div className='video-container'>
-          <ReactPlayer className='video' url='assets/video/video.mp4' controls />
+          <ReactPlayer className='video' url='https://s3-ap-southeast-1.amazonaws.com/caci2017/video.mp4' controls />
         </div>
         <div className='columns'>
           <div className='column is-two-thirds'>
