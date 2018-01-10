@@ -32,7 +32,7 @@ rules:
   }]
   func-names: 0
   indent: 2
-  jsx-quotes: [2, "prefer-single"]
+  jsx-quotes: [1, "prefer-single"]
   new-cap: 0
   no-plusplus: 0
   no-return-assign: 0

@@ -7,6 +7,9 @@ import HomePage from '../HomePage';
 import AboutPage from '../AboutPage';
 import WhatWeDo from '../WhatWeDo';
 import Footer from '../../components/Global/Footer';
+import MediaPage from '../MediaPage';
+import CoursePage from '../CoursePage';
+import RentalPage from '../RentalPage';
 
 const publicPath = '/';
 
@@ -15,6 +18,9 @@ export const routeCodes = {
   ABOUT: `${ publicPath }about`,
   CONTACT: `${ publicPath }contact`,
   WHATWEDO: `${ publicPath }wwd`,
+  MEDIA: `${ publicPath }media`,
+  COURSE: `${ publicPath }course`,
+  RENTAL: `${ publicPath }rental`,
 };
 
 class App extends Component {
@@ -32,6 +38,9 @@ class App extends Component {
               <Route exact path={ routeCodes.HOME } component={ HomePage } />
               <Route exact path={ routeCodes.ABOUT } component={ AboutPage } />
               <Route exact path={ routeCodes.WHATWEDO } component={ WhatWeDo } />
+              <Route exact path={ routeCodes.MEDIA } component={ MediaPage } />
+              <Route exact path={ routeCodes.COURSE } component={ CoursePage } />
+              <Route exact path={ routeCodes.RENTAL } component={ RentalPage } />
             </Switch>
           </div>
           <Footer />
