@@ -30,6 +30,22 @@ const PLAYLIST = [
     name: 'River',
     directory: 'https://s3-ap-southeast-1.amazonaws.com/caci2017/River.mp3',
   },
+  {
+    name: 'Little Angle',
+    directory: 'https://s3-ap-southeast-1.amazonaws.com/caci2017/Little_Angle.mp3',
+  },
+  {
+    name: 'New Day',
+    directory: 'https://s3-ap-southeast-1.amazonaws.com/caci2017/New_Day.mp3',
+  },
+  {
+    name: 'My Heart Will Go On',
+    directory: 'https://s3-ap-southeast-1.amazonaws.com/caci2017/My_Heart_Will_Go_On.mp3',
+  },
+  {
+    name: 'River',
+    directory: 'https://s3-ap-southeast-1.amazonaws.com/caci2017/River.mp3',
+  },
 ];
 
 class AudioPlayer extends Component {
@@ -172,7 +188,6 @@ class AudioPlayer extends Component {
   };
 
   render() {
-    console.log(this.state);
     return (
       <div className='player paused'>
         <div className='album'>
