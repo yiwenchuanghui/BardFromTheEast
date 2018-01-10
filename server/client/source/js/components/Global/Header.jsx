@@ -6,9 +6,6 @@ const Header = () => {
   return (
     <nav className='navbar is-black is-transparents header '>
       <div className='navbar-brand nav-logo'>
-
-
-
         <NavLink className='navbar-item' activeClassName='' to={ routeCodes.HOME }>
           Bard From The East
         </NavLink>
@@ -24,8 +21,17 @@ const Header = () => {
         <NavLink className='navbar-item' activeClassName='active' to={ routeCodes.WHATWEDO }>
           WhatWeDo
         </NavLink>
+        <NavLink className='navbar-item' activeClassName='active' to={ routeCodes.MEDIA }>
+          Media
+        </NavLink>
+        <NavLink className='navbar-item' activeClassName='active' to={ routeCodes.COURSE }>
+          Course
+        </NavLink>
+        <NavLink className='navbar-item' activeClassName='active' to={ routeCodes.RENTAL }>
+          Rental
+        </NavLink>
         <NavLink className='navbar-item' activeClassName='active' to={ routeCodes.ABOUT }>
-          AboutTeam
+          Team
         </NavLink>
         <NavLink className='navbar-item' activeClassName='active' to={ routeCodes.CONTACT }>
           Contact

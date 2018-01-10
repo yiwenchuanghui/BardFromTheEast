@@ -1,11 +1,47 @@
-.video-container {
-  background: url('../assets/images/rock.jpeg') no-repeat center center;
+.welcome {
+  background: url('../assets/images/festival.jpg') no-repeat center center;
   background-size: cover;
   width: 100%;
   padding: 100px 0;
-  .video {
+  .welcome-video {
+    position: relative;
     margin: 0 auto;
+    width: 56%;
+    padding: 0;
+    .welcome-content {
+      position: absolute;
+      display: block;
+      width: 70%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.5);
+      .left {
+        display: inline-block;
+        float: left;
+        width: 50%;
+        border-right: 2px solid #fff;
+        span {
+          color: rgba(0,208,255,1);
+          font-size: 2.5em;
+        }
+        strong {
+          color: #fff;
+          font-weight: bold;
+        }
+      }
+
+      .right {
+        display: inline-block;
+        color: #fff;
+        width: 50%;
+        padding-left: 10px;
+      }
+
+    }
   }
+
+
 }
 
 .news-feed {
