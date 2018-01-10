@@ -10,6 +10,7 @@ import Footer from '../../components/Global/Footer';
 import MediaPage from '../MediaPage';
 import CoursePage from '../CoursePage';
 import RentalPage from '../RentalPage';
+import ContactPage from '../ContactPage';
 
 const publicPath = '/';
 
@@ -41,6 +42,7 @@ class App extends Component {
               <Route exact path={ routeCodes.MEDIA } component={ MediaPage } />
               <Route exact path={ routeCodes.COURSE } component={ CoursePage } />
               <Route exact path={ routeCodes.RENTAL } component={ RentalPage } />
+              <Route exact path={ routeCodes.CONTACT } component={ ContactPage } />
             </Switch>
           </div>
           <Footer />

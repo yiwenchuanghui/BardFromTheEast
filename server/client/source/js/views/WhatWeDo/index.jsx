@@ -36,7 +36,7 @@ const WhatWeDo = () => {
       <div style={ { width: '60%', margin: '0 auto' } }>
         <Masonry brakePoints={ brakePoints }>
           {WWD.map(({ title, img, content }, index) => (
-            <WWDcard title={ title } img={ img } content={ content } />
+            <WWDcard key={ index } title={ title } img={ img } content={ content } />
           ))}
         </Masonry>
       </div>
