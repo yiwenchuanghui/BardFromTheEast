@@ -5,15 +5,19 @@ html {
 // Header
 
 .header {
-  height: 30vh;
   font-family: 'Bold Font';
 }
 .navbar {
   background: url(../assets/images/bard_white.png) no-repeat center center;
   background-size: 200px 141px;
+  z-index: 11;
   @include sm{
     background: none;
   };
+}
+.navbar-item {
+  background-color: #000;
+
 }
 .nav-logo {
   margin-left: 1em;
