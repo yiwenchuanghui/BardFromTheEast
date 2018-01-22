@@ -62,7 +62,9 @@ class HomePage extends Component {
           <div className="column music-box" style={{ position: "relative" }}>
             <h1 className="title">Our Music</h1>
             <AudioPlayer />
-            <ContactInfo />
+            <div className='contact-info'>
+              <ContactInfo />
+            </div>
           </div>
         </div>
       </div>
