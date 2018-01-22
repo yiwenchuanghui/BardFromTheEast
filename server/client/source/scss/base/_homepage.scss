@@ -112,6 +112,10 @@
   }
 
   .contact-info {
+    width: 20em;
+    @include sm{
+      width: 100%;
+    };;
     margin-top: 10px;
     background-color: #424A4F;
     color: #fff;
