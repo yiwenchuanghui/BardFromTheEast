@@ -1,38 +1,33 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { routeCodes } from '../../views/App';
+
 const classNames = require('classnames');
 
 class Header extends Component {
   state = {
-    burgerIsActive: false
+    burgerIsActive: false,
   };
 
   render() {
-    let navbarBurgerClassName = classNames({
-      "navbar-burger burger": true,
-      'is-active': this.state.burgerIsActive
+    const navbarBurgerClassName = classNames({
+      'navbar-burger burger': true,
+      'is-active': this.state.burgerIsActive,
     });
-    let navbarMenuClassName = classNames({
+    const navbarMenuClassName = classNames({
       'navbar-menu navbar-end app-menu': true,
-      'is-active': this.state.burgerIsActive
+      'is-active': this.state.burgerIsActive,
     });
     return (
       <nav className="navbar is-black is-transparents header ">
         <div className="navbar-brand nav-logo">
-          <NavLink
-            className="navbar-item"
-            activeClassName=""
-            to={routeCodes.HOME}
-          >
+          <NavLink className="navbar-item" activeClassName="" to={routeCodes.HOME}>
             Bard From The East
           </NavLink>
 
           <div
             className={navbarBurgerClassName}
-            onClick={() =>
-              this.setState({ burgerIsActive: !this.state.burgerIsActive })
-            }
+            onClick={() => this.setState({ burgerIsActive: !this.state.burgerIsActive })}
           >
             <span />
             <span />
@@ -45,6 +40,7 @@ class Header extends Component {
             className="navbar-item"
             activeClassName="active"
             to={routeCodes.WHATWEDO}
+            onClick={() => this.setState({ burgerIsActive: false })}
           >
             WhatWeDo
           </NavLink>
@@ -52,6 +48,7 @@ class Header extends Component {
             className="navbar-item"
             activeClassName="active"
             to={routeCodes.MEDIA}
+            onClick={() => this.setState({ burgerIsActive: false })}
           >
             Media
           </NavLink>
@@ -59,6 +56,7 @@ class Header extends Component {
             className="navbar-item"
             activeClassName="active"
             to={routeCodes.COURSE}
+            onClick={() => this.setState({ burgerIsActive: false })}
           >
             Course
           </NavLink>
@@ -66,6 +64,7 @@ class Header extends Component {
             className="navbar-item"
             activeClassName="active"
             to={routeCodes.RENTAL}
+            onClick={() => this.setState({ burgerIsActive: false })}
           >
             Rental
           </NavLink>
@@ -73,6 +72,7 @@ class Header extends Component {
             className="navbar-item"
             activeClassName="active"
             to={routeCodes.ABOUT}
+            onClick={() => this.setState({ burgerIsActive: false })}
           >
             Team
           </NavLink>
@@ -80,6 +80,7 @@ class Header extends Component {
             className="navbar-item"
             activeClassName="active"
             to={routeCodes.CONTACT}
+            onClick={() => this.setState({ burgerIsActive: false })}
           >
             Contact
           </NavLink>
