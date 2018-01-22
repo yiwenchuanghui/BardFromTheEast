@@ -1,6 +1,10 @@
 .media-page {
   margin: 20px auto;
   padding: 0 100px 100px 100px;
+  @include sm{
+    padding: 0;
+  };
+
   .player {
     position: relative;
     width: 100%;

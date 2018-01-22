@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import ReactPlayer from "react-player";
 import AudioPlayer from "../../components/Global/AudioPlayer";
 import NewsFeed from "./NewsFeed";
+import ContactInfo from '../../components/Global/ContactInfo';
 import "../../../assets/images/logo.png";
+
 
 const NEWS_DATA = [
   {
@@ -31,12 +33,13 @@ class HomePage extends Component {
       <div>
         <div className="welcome">
           <div className="welcome-video">
-            <ReactPlayer
+            {/* <ReactPlayer
               url="https://s3-ap-southeast-1.amazonaws.com/caci2017/BnW.mp4"
               playing
               loop
               muted
-            />
+            /> */}
+            <video src="https://s3-ap-southeast-1.amazonaws.com/caci2017/BnW.mp4" autoPlay loop muted />
             <div className="welcome-content">
               <div className="left">
                 <span>WELCOME</span>
@@ -59,6 +62,9 @@ class HomePage extends Component {
           <div className="column music-box" style={{ position: "relative" }}>
             <h1 className="title">Our Music</h1>
             <AudioPlayer />
+            <div className='contact-info'>
+              <ContactInfo />
+            </div>
           </div>
         </div>
       </div>
