@@ -7,14 +7,22 @@ html {
 .header {
   height: 30vh;
   font-family: 'Bold Font';
+  @include md {
+    height: 60px;
+  };;
 }
 .navbar {
   background: url(../assets/images/bard_white.png) no-repeat center center;
   background-size: 200px 141px;
+  z-index: 11;
   @include sm{
     background: none;
   };
 }
+.navbar-item {
+  background-color: #000;
+}
+
 .nav-logo {
   margin-left: 1em;
 
@@ -42,6 +50,9 @@ html {
     font-size: 22px;
     font-weight: bold;
     margin-right: 25px;
+    @include sm{
+      margin: 0 auto;
+    };
     padding: 0;
     &:hover {
       color: #ff930de0 !important;
