@@ -19,16 +19,15 @@ class Header extends Component {
       'is-active': this.state.burgerIsActive,
     });
     return (
-      <nav className="navbar is-black is-transparents header ">
+      <nav className="navbar is-transparents header">
+      <div className="container">
         <div className="navbar-brand nav-logo">
           <NavLink className="navbar-item" activeClassName="" to={routeCodes.HOME}>
-            Bard From The East
+          <img src="/assets/images/bard_white.png" alt=""/>
           </NavLink>
 
-          <div
-            className={navbarBurgerClassName}
-            onClick={() => this.setState({ burgerIsActive: !this.state.burgerIsActive })}
-          >
+          <div className={navbarBurgerClassName}
+            onClick={() => this.setState({ burgerIsActive: !this.state.burgerIsActive })}>
             <span />
             <span />
             <span />
@@ -36,6 +35,14 @@ class Header extends Component {
         </div>
 
         <div className={navbarMenuClassName}>
+          <NavLink
+              className="navbar-item"
+              activeClassName="active"
+              to={routeCodes.HOME}
+              onClick={() => this.setState({ burgerIsActive: false })}
+          >
+            Home
+          </NavLink>
           <NavLink
             className="navbar-item"
             activeClassName="active"
@@ -84,6 +91,7 @@ class Header extends Component {
           >
             Contact
           </NavLink>
+        </div>
         </div>
       </nav>
     );
