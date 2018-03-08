@@ -8,7 +8,7 @@ const NewsFeed = ({ data }) => {
       {data.map(({ title, date, text }, index) => (
         <div key={ index } className='news'>
           <div className="title-wrapper">
-            <h3 style={ { color: '#411D0C' } } className='title'>
+            <h3 className='title'>
               {title}
             </h3>
             <span style={ { color: '#fff' } } className='date'>

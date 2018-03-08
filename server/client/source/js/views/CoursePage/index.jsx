@@ -4,15 +4,10 @@ import React, { Component } from 'react';
 class CoursePage extends Component {
   render() {
     return (
-      <div className='columns'>
-        <div className='column'>
-          Course
-        </div>
-        <div className='column'>
-
-        </div>
-
-
+      <div className="course-page">
+        <h1 className="title">
+          Course Information
+        </h1>
       </div>
     );
   }

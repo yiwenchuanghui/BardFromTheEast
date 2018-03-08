@@ -191,8 +191,8 @@ class AudioPlayer extends Component {
             <span className='duration'>0:00</span>
           </div>
 
-          <h1>{PLAYLIST[this.state.currentTrackIndex].name}</h1>
-          <h2>东方诗人</h2>
+          <h3>{PLAYLIST[this.state.currentTrackIndex].name}</h3>
+          <span>东方诗人</span>
         </div>
 
         <div className='actions'>

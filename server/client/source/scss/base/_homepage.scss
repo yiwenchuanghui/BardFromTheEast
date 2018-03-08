@@ -2,8 +2,9 @@
   margin-top: -100px;
 }
 .lower-wrapper{
-  background-color:#e4002b;
-  padding:0 40px;
+  // background-color: #e4002b;
+  padding: 20px 40px;
+  padding-bottom: 3rem;
 }
 .player-wrapper{
   margin-left: 30px;
@@ -86,10 +87,31 @@
       // display: inline-block;
       font-weight: bold;
       margin-bottom:0;
+      color: #ffbe76;
     }
     p {
       font-size: 14px;
-      color: #000;
+      color: #eee;
+    }
+  }
+}
+
+
+.music-box {
+  @include sm {
+    padding: 1em;
+  }
+  ;
+  h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 10px;
+    line-height: 1.5
+  }
+  .player {
+    @include sm {
+      width: 100%;
     }
   }
 }
@@ -100,36 +122,11 @@
     color: #fff;
   }
 }
-
-.music-box {
-  @include sm {
-    padding: 1em;
-  }
-  ;
-  .title {
-    color: #fff;
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 10px;
-    line-height: 1.5
-
-  }
-  .player {
+.contact-info {
     @include sm {
       width: 100%;
     }
-  }
-
-  .contact-info {
-    width: 20em;
-    @include sm {
-      width: 100%;
-    }
-    ;
-    ;
-    margin-top: 10px;
     background-color: #424A4F;
     color: #fff;
-    padding: 10px;
-  }
+    padding: 2rem 5rem;
 }

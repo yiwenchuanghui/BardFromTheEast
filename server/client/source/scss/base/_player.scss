@@ -1,6 +1,5 @@
 .media-page {
-  margin: 20px auto;
-  padding: 0 100px 100px 100px;
+  padding: 4rem;
   @include sm{
     padding: 0;
   };
@@ -216,8 +215,14 @@
   }
 
   .info {
+    padding-top: 3rem;
     text-align: center;
-    text-shadow: 0 0.0625em rgba(255,255,255,1);
+    h3{
+      display:block;
+      font-size:2rem;
+      margin-bottom:0;
+      color: #ffbe76;
+    }
   }
 
   .time {
@@ -412,9 +417,9 @@
     transform: skewX(30deg);
     border-bottom: 0.125em solid;
     border-left: 0.125em solid;
-    // box-shadow:
-    //   -0.3125em 0em 0 -0.1875em #eee,
-    //   inset 0.375em 0.25em 0 -0.25em #eee;
+    box-shadow:
+      -0.3125em 0em 0 -0.1875em #eee,
+      inset 0.375em 0.25em 0 -0.25em #eee;
   }
 
   .shuffle .arrow::after {
@@ -472,7 +477,7 @@
   .playlist {
     ul {
       li {
-        border: 1px solid #d5d5d5;
+        border-bottom: 1px solid #d5d5d5;
         cursor: pointer;
         padding: 10px;
       }
