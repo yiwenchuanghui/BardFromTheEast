@@ -1,4 +1,9 @@
 .media-page {
   // background: url('../assets/images/disc.jpeg') no-repeat center center;
   // background-size: cover;
+  .player {
+    @include sm {
+      padding: 10px;
+    }
+  }
 }

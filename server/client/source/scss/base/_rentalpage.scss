@@ -3,6 +3,7 @@
   background-size: cover;
   padding: 0 200px;
   @include sm {
-    padding: 150px 2px;
+    padding: 15px;
+    height: 100%;
   };
 }

@@ -4,7 +4,7 @@ import ReactPlayer from "react-player";
 const VideoFeed = ({ data }) => {
   return (
     <div className='video-feed'>
-      <h1>Video</h1>
+      <h1 className='home-title'>Video</h1>
       <div className="columns">
         <div className="column">
           <div className='video-content'>
