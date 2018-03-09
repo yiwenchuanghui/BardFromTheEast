@@ -4,6 +4,7 @@ class RentalPage extends Component {
   render() {
     return (
       <div className='rental-page'>
+        <h1 className='title'>Rental Information</h1>
         <table className="table is-fullwidth is-hoverable">
           <thead>
             <tr>

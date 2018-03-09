@@ -3,16 +3,6 @@
   background-size: cover;
   padding-bottom: 150px;
   align-items: center;
-
-  .title {
-    background-color: #000;
-    font-size: 2em;
-    padding: 10px 0;
-    margin-left: 15px;
-    font-family: 'Bold Font';
-    display: inline-block;
-    color: #fff;
-  }
 }
 
 
@@ -35,21 +25,19 @@
     // object-fit: cover;
     transition: all 0.25s ease;
   }
-  h1 {
+  h2 {
+    font-size: 1.6rem;
     background: rgba(0, 0, 0, 0.8);
-    color: #00ffff;
-    font-family: 'Bold Font';
-    max-width: 50%;
-    padding: 2px;
+    color: #ffbe76;
+    padding: .7rem;
     position: absolute;
-
     bottom: 0;
     left: 0;
   }
 }
 .wwd-card-content {
   margin-top: 15px;
-  background-color: #000;
+  background-color: rgba(0,0,0,0.2);
   text-align: left;
   padding: 15px;
   h2 {

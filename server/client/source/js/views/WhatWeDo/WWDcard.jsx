@@ -5,7 +5,7 @@ const WWDcard = ({title, img, content}) => {
     <div className='wwd-card'>
       <div className='wwd-card-img'>
         <img src={ img } alt='wwd' />
-        <h1>{title}</h1>
+        <h2>{title}</h2>
       </div>
       <div className='wwd-card-content'>
         <p>{content}</p>

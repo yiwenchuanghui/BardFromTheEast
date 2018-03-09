@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactPlayer from 'react-player';
 import AudioPlayer from '../../components/Global/AudioPlayer';
 import NewsFeed from './NewsFeed';
+import VideoFeed from './VideoFeed';
 import ContactInfo from '../../components/Global/ContactInfo';
 import '../../../assets/images/logo.png';
 
@@ -30,14 +31,14 @@ class HomePage extends Component {
   render() {
     return (
       <div>
+      <div className="upper-wrapper">
         <div className="welcome">
           <div className="welcome-video">
             <video
               src="https://s3-ap-southeast-1.amazonaws.com/caci2017/BnW.mp4"
               autoPlay
               loop
-              muted
-            />
+              muted/>
             <div className="welcome-content">
               <div className="left">
                 <span>WELCOME</span>
@@ -50,19 +51,27 @@ class HomePage extends Component {
             </div>
           </div>
         </div>
+      </div>
+      <div className="lower-wrapper">
         <div className="columns">
-          <div className="column is-two-thirds">
+          <div className="column is-three-fifths">
             <NewsFeed data={NEWS_DATA} />
           </div>
           <div className="column music-box" style={{ position: 'relative' }}>
-            <h1 className="title">Our Music</h1>
+            <div className="player-wrapper">
+            <h1>Our Music</h1>
             <AudioPlayer />
-            <div className="contact-info">
-              <ContactInfo />
             </div>
           </div>
         </div>
+        <div className="video">
+          <VideoFeed />
+        </div>
       </div>
+      <div className="contact-info">
+        <ContactInfo />
+      </div>
+    </div>
     );
   }
 }

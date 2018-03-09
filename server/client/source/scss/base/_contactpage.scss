@@ -1,30 +1,25 @@
 .contact-page {
-  background-color: #424A4F;
+  // background-color: #424A4F;
   color: #fff;
   text-align: center;
-  margin: 1em auto;
-  padding: 1em;
 
   .mailer {
-    margin: 1em;
-    padding: 1em;
+    margin: 1rem;
+    padding: 1rem 10rem;
   }
 
-  .contact-info {
-    margin: 1em;
-    padding: 1em;
-    text-align: left;
-    i {
-      margin: 3px;
-    }
-  }
-
-  h1 {
-    border-bottom: 1px dashed #fff;
-  }
 
   button {
     width: 200px;
     font-size: 1.2em;
+  }
+  .contact-info {
+    text-align: left;
+    background-color: #424A4F;
+    color: #fff;
+    padding: 2rem 5rem;
+    i {
+      margin: 3px;
+    }
   }
 }

@@ -3,7 +3,7 @@ import Masonry from '../../components/Global/Masonry';
 import WWDcard from './WWDcard';
 
 import '../../../assets/images/wwd.jpeg';
-import '../../../assets/images/camera.jpeg';
+import '../../../assets/images/camera.jpg';
 import '../../../assets/images/sm.jpeg';
 
 const brakePoints = [350, 576, 769, 992, 1200];
@@ -17,7 +17,7 @@ const WWD = [
   },
   {
     title: 'Publicity',
-    img: '../../assets/images/camera.jpeg',
+    img: '../../assets/images/camera.jpg',
     content:
       'In publishing and graphic design, lorem ipsum is a filler text or greeking commonly used to demonstrate the textual elements of a graphic document or visual presentation. Replacing meaningful content with placeholder text allows designers to design the form of the content before the content itself has been produced.',
   },

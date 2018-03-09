@@ -6,20 +6,15 @@ class ContactPage extends Component {
   render() {
     return (
       <div className='contact-page'>
-        <h1>Contact</h1>
-
+      <div className="top-wrapper">
+        <h1 className='title'>Contact</h1>
         <h3>Please contact us if you have any questions</h3>
         <span>We'd ♡ to help</span>
-        <hr />
-        <div className='columns'>
-          <div className='column'>
-            <Mailer />
-          </div>
-          <div className='column contact-info'>
-            <ContactInfo />
-          </div>
-        </div>
-
+      </div>
+      <Mailer />
+      <div className='contact-info'>
+          <ContactInfo />
+      </div>
       </div>
     );
   }

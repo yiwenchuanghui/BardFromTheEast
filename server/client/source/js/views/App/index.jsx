@@ -34,7 +34,6 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Header />
-          <div className='container'>
             <Switch>
               <Route exact path={ routeCodes.HOME } component={ HomePage } />
               <Route exact path={ routeCodes.ABOUT } component={ AboutPage } />
@@ -44,7 +43,6 @@ class App extends Component {
               <Route exact path={ routeCodes.RENTAL } component={ RentalPage } />
               <Route exact path={ routeCodes.CONTACT } component={ ContactPage } />
             </Switch>
-          </div>
           <Footer />
         </div>
       </BrowserRouter>

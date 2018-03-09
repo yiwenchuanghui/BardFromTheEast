@@ -44,7 +44,7 @@ const ARTISTS = [
 const AboutPage = () => {
   return (
     <div className='about-page'>
-      <h1 style={ { color: '#fff' } } className='title'>
+      <h1 className='title'>
         Artists
       </h1>
       <div style={ { width: '60%', margin: '0 auto' } }>

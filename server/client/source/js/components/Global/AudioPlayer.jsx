@@ -190,14 +190,7 @@ class AudioPlayer extends Component {
   render() {
     return (
       <div className='player paused'>
-        <div className='album'>
-          <div className='cover'>
-            <div>
-              <img src='../../../assets/images/Bardlogo.jpg' alt='3rdburglar by Wordburglar' />
-            </div>
-          </div>
-        </div>
-
+        <img className='cover' src="../../../assets/images/cover.jpg" alt=""/>
         <div className='info'>
           <div className='time'>
             <span className='current-time'>0:00</span>
@@ -207,8 +200,8 @@ class AudioPlayer extends Component {
             <span className='duration'>0:00</span>
           </div>
 
-          <h1>{PLAYLIST[this.state.currentTrackIndex].name}</h1>
-          <h2>东方诗人</h2>
+          <h3>{PLAYLIST[this.state.currentTrackIndex].name}</h3>
+          <span style={{color: '#eee'}}>东方诗人</span>
         </div>
 
         <div className='actions'>
