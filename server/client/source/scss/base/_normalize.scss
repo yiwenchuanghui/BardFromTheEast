@@ -464,3 +464,9 @@ h1.title {
     font-weight: bold;
     margin-bottom: 1.5rem;
 }
+
+@include sm {
+  h1.title{
+    font-size:2rem;
+  }
+}

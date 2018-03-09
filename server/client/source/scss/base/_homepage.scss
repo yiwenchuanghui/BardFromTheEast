@@ -2,13 +2,9 @@
   margin-top: -100px;
 }
 .lower-wrapper{
-  // background-color: #e4002b;
-  padding: 20px 40px;
-  padding-bottom: 3rem;
+  padding:1.5rem 4rem;
 }
 .player-wrapper{
-  float: right;
-  padding-right: 30px;
   @include sm {
     h1 {
       text-align: center;
@@ -31,7 +27,6 @@
     @include sm {
       width: 100%;
     }
-    ;
     padding: 0;
     .welcome-content {
       position: absolute;
@@ -74,18 +69,21 @@
     }
   }
 }
-
-.news-feed {
-  .lat-news {
+.home-title {
     font-size: 3rem;
     font-weight: bold;
     color: #fff;
     margin: 10px 0;
+    @include lg {
+      font-size: 2.5rem;
+    }
     @include sm {
       margin: 0 auto;
       text-align: center;
     }
   }
+
+.news-feed {
   .video-content {
     width: 90%;
     margin: 0 auto;
@@ -96,12 +94,29 @@
     .title-wrapper{
       margin-bottom: 7px;
     }
-    h3 {
+    h3.news-title {
       // display: inline-block;
       font-weight: bold;
+      font-size:1.8rem;
       margin-bottom:0;
       color: #ffbe76;
+      @include lg {
+        font-size: 1.4rem;
+      }
+      @include sm {
+        margin: 0 auto;
+        text-align: center;
+      }
     }
+    .date{
+      @include sm {
+        font-size:.8rem;
+        display:block;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+    
     p {
       font-size: 14px;
       color: #eee;
@@ -111,16 +126,12 @@
 
 
 .music-box {
+  padding-left: 6rem;
+  @include md {
+    padding: 0.75rem;
+  }
   @include sm {
     padding: 1em;
-  }
-  ;
-  h1 {
-    color: #fff;
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 10px;
-    line-height: 1.5
   }
   .player {
     @include sm {
@@ -129,15 +140,7 @@
   }
 }
 .video-feed{
-  padding: 0 40px;
-  h1{
-    font-size: 3rem;
-    font-weight: bold;
-    color: #fff;
-    @include sm {
-      text-align: center;
-    }
-  }
+  
 }
 .contact-info {
   padding: 2rem 5rem;

@@ -21,12 +21,17 @@ html {
 
   .navbar-item {
     padding: 10px;
+    text-align: center;
   }
 
   .navbar-menu {
     margin-top: -4px;
     background-color: rgba(0, 0, 0, 0.7);
     
+  }
+  .navbar-burger{
+        margin: auto;
+    margin-right: 1rem;
   }
 }
 
@@ -45,7 +50,7 @@ html {
     }
   }
   img {
-    max-height: 120px;
+    max-height: 100px;
     @include md {
       height: 70px;
       margin-top: -6px;
