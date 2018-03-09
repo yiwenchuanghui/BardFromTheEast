@@ -48,7 +48,7 @@ const AboutPage = () => {
         Artists
       </h1>
       <div style={ { width: '60%', margin: '0 auto' } }>
-        <Masonry brakePoints={ brakePoints }>
+        <Masonry offsetWidth={1000} brakePoints={ brakePoints }>
           {ARTISTS.map((data, index) => (
             <ArtistCard key={ index } img={ data.img } name={ data.name } about={ data.about } />
           ))}
